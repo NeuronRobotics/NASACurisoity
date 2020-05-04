@@ -32,8 +32,10 @@
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>235</indexLatch>
+	<indexLatch>180.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -86,8 +88,10 @@
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>128</indexLatch>
+	<indexLatch>128.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -140,8 +144,10 @@
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>121</indexLatch>
+	<indexLatch>121.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -189,13 +195,15 @@
 	<type>servo-rotory</type>
 	<index>7</index>
 	<scale>0.001</scale>
-	<upperLimit>1000000.0</upperLimit>
-	<lowerLimit>-1000000.0</lowerLimit>
+	<upperLimit>120000.0</upperLimit>
+	<lowerLimit>-120000.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>0.0</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
 	<isLatch>false</isLatch>
-	<indexLatch>0</indexLatch>
+	<indexLatch>0.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -243,19 +251,19 @@
 	<y>0.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
-	<rotx>0.0</rotx>
-	<roty>0.0</roty>
-	<rotz>0.0</rotz>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
 	<x>-75.00000000000001</x>
 	<y>-23.069999999999993</y>
 	<z>38.0952380952381</z>
-	<rotw>0.054558816487634824</rotw>
-	<rotx>0.017903011951484017</rotx>
-	<roty>0.007757137705636377</roty>
-	<rotz>0.9983179493621163</rotz>
+	<rotw>0.054558923327821106</rotw>
+	<rotx>0.01790304701018314</rotx>
+	<roty>0.007757152896105871</roty>
+	<rotz>0.9983199043252651</rotz>
 </baseToZframe>
 
 </appendage>
@@ -281,8 +289,10 @@
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>128.0</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>105</indexLatch>
+	<indexLatch>105.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -335,8 +345,10 @@
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>133.7089552238806</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>105</indexLatch>
+	<indexLatch>105.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -384,19 +396,19 @@
 	<y>0.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
-	<rotx>0.0</rotx>
-	<roty>0.0</roty>
-	<rotz>0.0</rotz>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
 	<x>-78.5</x>
 	<y>-73.75</y>
 	<z>0.0</z>
-	<rotw>0.0059875959315833435</rotw>
-	<rotx>-0.7072013688991231</rotx>
-	<roty>-0.7071981921208194</roty>
-	<rotz>0.006353650354878166</rotz>
+	<rotw>0.005986580456326229</rotw>
+	<rotx>-0.7070814300288117</rotx>
+	<roty>-0.7070782537892785</roty>
+	<rotz>0.006352572798075492</rotz>
 </baseToZframe>
 
 </steerable>
@@ -422,8 +434,10 @@
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>133.7089552238806</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>105</indexLatch>
+	<indexLatch>105.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -476,8 +490,10 @@
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>144.84283804856315</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>124</indexLatch>
+	<indexLatch>124.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -525,19 +541,19 @@
 	<y>0.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
-	<rotx>0.0</rotx>
-	<roty>0.0</roty>
-	<rotz>0.0</rotz>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
 	<x>73.5</x>
 	<y>-74.5</y>
 	<z>3.2862601528904634E-14</z>
-	<rotw>0.006170202857931536</rotw>
-	<rotx>-0.7071244963665876</rotx>
-	<roty>-0.7071244963665876</roty>
-	<rotz>0.006170981991476204</rotz>
+	<rotw>0.006169813372543178</rotw>
+	<rotx>-0.7070798601260253</rotx>
+	<roty>-0.7070798601260253</roty>
+	<rotz>0.006170592456906135</rotz>
 </baseToZframe>
 
 </steerable>
@@ -563,8 +579,10 @@
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>133.7089552238806</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>105</indexLatch>
+	<indexLatch>105.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -617,8 +635,10 @@
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>109.22577411450214</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>133</indexLatch>
+	<indexLatch>133.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -666,19 +686,19 @@
 	<y>0.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
-	<rotx>0.0</rotx>
-	<roty>0.0</roty>
-	<rotz>0.0</rotz>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
 	<x>73.5</x>
 	<y>74.5</y>
 	<z>0.0</z>
-	<rotw>0.006170524232177906</rotw>
-	<rotx>-0.707087670589587</rotx>
-	<roty>-0.707087670589587</roty>
-	<rotz>0.006170660617709914</rotz>
+	<rotw>0.006170456048332295</rotw>
+	<rotx>-0.707079857322067</rotx>
+	<roty>-0.707079857322067</roty>
+	<rotz>0.006170592432357253</rotz>
 </baseToZframe>
 
 </steerable>
@@ -704,8 +724,10 @@
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>133.7089552238806</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>105</indexLatch>
+	<indexLatch>105.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -758,8 +780,10 @@
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>120.38805970149252</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>135</indexLatch>
+	<indexLatch>135.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -807,19 +831,19 @@
 	<y>0.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
-	<rotx>0.0</rotx>
-	<roty>0.0</roty>
-	<rotz>0.0</rotz>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
 	<x>-78.5</x>
 	<y>73.75</y>
 	<z>0.0</z>
-	<rotw>0.0059875959315833435</rotw>
-	<rotx>-0.7072013688991231</rotx>
-	<roty>-0.7071981921208194</roty>
-	<rotz>0.006353650354878166</rotz>
+	<rotw>0.005986580456326229</rotw>
+	<rotx>-0.7070814300288117</rotx>
+	<roty>-0.7070782537892785</roty>
+	<rotz>0.006352572798075492</rotz>
 </baseToZframe>
 
 </steerable>
@@ -845,8 +869,10 @@
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>162.25373134328353</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>171</indexLatch>
+	<indexLatch>171.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -894,19 +920,19 @@
 	<y>0.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
-	<rotx>0.0</rotx>
-	<roty>0.0</roty>
-	<rotz>0.0</rotz>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
 	<x>-3.1554436208840472E-30</x>
 	<y>-74.0</y>
 	<z>1.6431300764452317E-14</z>
-	<rotw>0.00617059241904126</rotw>
-	<rotx>0.006170592435283685</rotx>
-	<roty>0.7070798576578818</roty>
-	<rotz>0.7070798576578817</rotz>
+	<rotw>0.006170592410918338</rotw>
+	<rotx>0.006170592427160763</rotx>
+	<roty>0.7070798567270872</roty>
+	<rotz>0.7070798567270871</rotz>
 </baseToZframe>
 
 </drivable>
@@ -932,8 +958,10 @@
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>122.2910447761194</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
-	<indexLatch>128</indexLatch>
+	<indexLatch>128.0</indexLatch>
 	<isStopOnLatch>false</isStopOnLatch>
 	<homingTPS>10000000</homingTPS>
 
@@ -981,19 +1009,19 @@
 	<y>0.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
-	<rotx>0.0</rotx>
-	<roty>0.0</roty>
-	<rotz>0.0</rotz>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
 	<x>3.1554436208840472E-30</x>
 	<y>74.0</y>
 	<z>-1.6431300764452317E-14</z>
-	<rotw>0.006164910308917814</rotw>
-	<rotx>0.00617627454586452</rotx>
-	<roty>0.7070797612710817</roty>
-	<rotz>0.7070799597247739</rotz>
+	<rotw>0.006164910275843254</rotw>
+	<rotx>0.006176274512728991</rotx>
+	<roty>0.7070797574776199</roty>
+	<rotz>0.7070799559313109</rotz>
 </baseToZframe>
 
 </drivable>
@@ -1003,9 +1031,9 @@
 	<y>0.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
-	<rotx>0.0</rotx>
-	<roty>0.0</roty>
-	<rotz>0.0</rotz>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
@@ -1013,9 +1041,9 @@
 	<y>0.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
-	<rotx>0.0</rotx>
-	<roty>0.0</roty>
-	<rotz>0.0</rotz>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
 </baseToZframe>
 	<mass>0.01</mass>
 	<centerOfMassFromCentroid>	<x>0.0</x>
