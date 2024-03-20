@@ -286,8 +286,8 @@
 	<scale>2.0</scale>
 	<upperLimit>255.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
-	<upperVelocity>308.0</upperVelocity>
-	<lowerVelocity>-308.0</lowerVelocity>
+	<upperVelocity>178.0</upperVelocity>
+	<lowerVelocity>-178.0</lowerVelocity>
 	<staticOffset>128.0</staticOffset>
 	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
 	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
@@ -405,10 +405,10 @@
 	<x>-78.5</x>
 	<y>-73.75</y>
 	<z>0.0</z>
-	<rotw>0.00598658045632623</rotw>
-	<rotx>-0.7070814300288119</rotx>
-	<roty>-0.7070782537892786</roty>
-	<rotz>0.006352572798075494</rotz>
+	<rotw>0.005986580456326232</rotw>
+	<rotx>-0.707081430028812</rotx>
+	<roty>-0.7070782537892787</roty>
+	<rotz>0.006352572798075495</rotz>
 </baseToZframe>
 
 </steerable>
@@ -431,8 +431,8 @@
 	<scale>1.0</scale>
 	<upperLimit>255.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
-	<upperVelocity>493.7089552238806</upperVelocity>
-	<lowerVelocity>-493.7089552238806</lowerVelocity>
+	<upperVelocity>233.7089552238806</upperVelocity>
+	<lowerVelocity>-233.7089552238806</lowerVelocity>
 	<staticOffset>133.7089552238806</staticOffset>
 	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
 	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
@@ -576,8 +576,8 @@
 	<scale>1.0</scale>
 	<upperLimit>255.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
-	<upperVelocity>493.7089552238806</upperVelocity>
-	<lowerVelocity>-493.7089552238806</lowerVelocity>
+	<upperVelocity>233.7089552238806</upperVelocity>
+	<lowerVelocity>-233.7089552238806</lowerVelocity>
 	<staticOffset>133.7089552238806</staticOffset>
 	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
 	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
@@ -721,8 +721,8 @@
 	<scale>1.0</scale>
 	<upperLimit>255.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
-	<upperVelocity>433.7089552238806</upperVelocity>
-	<lowerVelocity>-433.7089552238806</lowerVelocity>
+	<upperVelocity>233.7089552238806</upperVelocity>
+	<lowerVelocity>-233.7089552238806</lowerVelocity>
 	<staticOffset>133.7089552238806</staticOffset>
 	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
 	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
@@ -840,10 +840,10 @@
 	<x>-78.5</x>
 	<y>73.75</y>
 	<z>0.0</z>
-	<rotw>0.00598658045632623</rotw>
-	<rotx>-0.7070814300288119</rotx>
-	<roty>-0.7070782537892786</roty>
-	<rotz>0.006352572798075494</rotz>
+	<rotw>0.005986580456326232</rotw>
+	<rotx>-0.707081430028812</rotx>
+	<roty>-0.7070782537892787</roty>
+	<rotz>0.006352572798075495</rotz>
 </baseToZframe>
 
 </steerable>
