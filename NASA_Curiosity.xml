@@ -260,10 +260,10 @@
 	<x>-75.00000000000001</x>
 	<y>-23.069999999999993</y>
 	<z>38.0952380952381</z>
-	<rotw>0.054558923327821106</rotw>
-	<rotx>0.01790304701018314</rotx>
-	<roty>0.007757152896105871</roty>
-	<rotz>0.9983199043252651</rotz>
+	<rotw>0.05455892332782112</rotw>
+	<rotx>0.017903047010183144</rotx>
+	<roty>0.0077571528961058725</roty>
+	<rotz>0.9983199043252653</rotz>
 </baseToZframe>
 
 </appendage>
@@ -286,8 +286,8 @@
 	<scale>2.0</scale>
 	<upperLimit>255.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
-	<upperVelocity>1.0E8</upperVelocity>
-	<lowerVelocity>-1.0E8</lowerVelocity>
+	<upperVelocity>308.0</upperVelocity>
+	<lowerVelocity>-308.0</lowerVelocity>
 	<staticOffset>128.0</staticOffset>
 	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
 	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
@@ -405,10 +405,10 @@
 	<x>-78.5</x>
 	<y>-73.75</y>
 	<z>0.0</z>
-	<rotw>0.005986580456326229</rotw>
-	<rotx>-0.7070814300288117</rotx>
-	<roty>-0.7070782537892785</roty>
-	<rotz>0.006352572798075492</rotz>
+	<rotw>0.00598658045632623</rotw>
+	<rotx>-0.7070814300288119</rotx>
+	<roty>-0.7070782537892786</roty>
+	<rotz>0.006352572798075494</rotz>
 </baseToZframe>
 
 </steerable>
@@ -431,8 +431,8 @@
 	<scale>1.0</scale>
 	<upperLimit>255.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
-	<upperVelocity>1.0E8</upperVelocity>
-	<lowerVelocity>-1.0E8</lowerVelocity>
+	<upperVelocity>493.7089552238806</upperVelocity>
+	<lowerVelocity>-493.7089552238806</lowerVelocity>
 	<staticOffset>133.7089552238806</staticOffset>
 	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
 	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
@@ -576,8 +576,8 @@
 	<scale>1.0</scale>
 	<upperLimit>255.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
-	<upperVelocity>1.0E8</upperVelocity>
-	<lowerVelocity>-1.0E8</lowerVelocity>
+	<upperVelocity>493.7089552238806</upperVelocity>
+	<lowerVelocity>-493.7089552238806</lowerVelocity>
 	<staticOffset>133.7089552238806</staticOffset>
 	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
 	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
@@ -695,10 +695,10 @@
 	<x>73.5</x>
 	<y>74.5</y>
 	<z>0.0</z>
-	<rotw>0.006170456048332295</rotw>
-	<rotx>-0.707079857322067</rotx>
-	<roty>-0.707079857322067</roty>
-	<rotz>0.006170592432357253</rotz>
+	<rotw>0.006170456048332297</rotw>
+	<rotx>-0.7070798573220671</rotx>
+	<roty>-0.7070798573220671</roty>
+	<rotz>0.006170592432357255</rotz>
 </baseToZframe>
 
 </steerable>
@@ -721,8 +721,8 @@
 	<scale>1.0</scale>
 	<upperLimit>255.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
-	<upperVelocity>1.0E8</upperVelocity>
-	<lowerVelocity>-1.0E8</lowerVelocity>
+	<upperVelocity>433.7089552238806</upperVelocity>
+	<lowerVelocity>-433.7089552238806</lowerVelocity>
 	<staticOffset>133.7089552238806</staticOffset>
 	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
 	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
@@ -840,10 +840,10 @@
 	<x>-78.5</x>
 	<y>73.75</y>
 	<z>0.0</z>
-	<rotw>0.005986580456326229</rotw>
-	<rotx>-0.7070814300288117</rotx>
-	<roty>-0.7070782537892785</roty>
-	<rotz>0.006352572798075492</rotz>
+	<rotw>0.00598658045632623</rotw>
+	<rotx>-0.7070814300288119</rotx>
+	<roty>-0.7070782537892786</roty>
+	<rotz>0.006352572798075494</rotz>
 </baseToZframe>
 
 </steerable>
