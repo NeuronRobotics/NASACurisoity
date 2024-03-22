@@ -429,11 +429,11 @@
 	<type>virtual</type>
 	<index>1</index>
 	<scale>1.0</scale>
-	<upperLimit>255.0</upperLimit>
-	<lowerLimit>0.0</lowerLimit>
+	<upperLimit>147.0</upperLimit>
+	<lowerLimit>88.2910447761194</lowerLimit>
 	<upperVelocity>233.7089552238806</upperVelocity>
 	<lowerVelocity>-233.7089552238806</lowerVelocity>
-	<staticOffset>133.7089552238806</staticOffset>
+	<staticOffset>128.0</staticOffset>
 	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
 	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
@@ -557,13 +557,13 @@
 </link>
 
 <ZframeToRAS
->	<x>72.99999999997151</x>
+>	<x>70.54835204320156</x>
 	<y>-75.5</y>
-	<z>28.99994934804822</z>
-	<rotw>-3.3306690738751206E-16</rotw>
-	<rotx>-0.9999999999998416</rotx>
-	<roty>-2.0040423332400098E-22</roty>
-	<rotz>5.627994646685421E-7</rotz>
+	<z>43.650520072945795</z>
+	<rotw>-2.212898792825632E-16</rotw>
+	<rotx>-0.986285692457659</rotx>
+	<roty>-1.8324105121273126E-17</roty>
+	<rotz>-0.16504706254070714</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
@@ -579,13 +579,13 @@
 </drivable>
 
 <ZframeToRAS>
-	<x>72.99999999997151</x>
+	<x>70.54835204320156</x>
 	<y>-75.5</y>
-	<z>28.99994934804822</z>
-	<rotw>-3.33066907387512E-16</rotw>
-	<rotx>-0.9999999999998416</rotx>
-	<roty>-2.004042333240009E-22</roty>
-	<rotz>5.627994646685419E-7</rotz>
+	<z>43.650520072945795</z>
+	<rotw>-2.212898792825632E-16</rotw>
+	<rotx>-0.986285692457659</rotx>
+	<roty>-1.8324105121273126E-17</roty>
+	<rotz>-0.16504706254070714</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
@@ -773,11 +773,11 @@
 	<type>virtual</type>
 	<index>2</index>
 	<scale>1.0</scale>
-	<upperLimit>255.0</upperLimit>
-	<lowerLimit>0.0</lowerLimit>
+	<upperLimit>149.0</upperLimit>
+	<lowerLimit>90.0</lowerLimit>
 	<upperVelocity>233.7089552238806</upperVelocity>
 	<lowerVelocity>-233.7089552238806</lowerVelocity>
-	<staticOffset>133.7089552238806</staticOffset>
+	<staticOffset>128.0</staticOffset>
 	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
 	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
 	<isLatch>true</isLatch>
@@ -901,13 +901,13 @@
 </link>
 
 <ZframeToRAS
->	<x>72.99999999999896</x>
+>	<x>72.4415774873882</x>
 	<y>76.5</y>
-	<z>28.999990247690103</z>
-	<rotw>-3.3306690738754647E-16</rotw>
-	<rotx>-0.9999999999999941</rotx>
-	<roty>-3.001500815907378E-23</roty>
-	<rotz>1.0835899877857744E-7</rotz>
+	<z>21.932738123398007</z>
+	<rotw>-5.533866959795469E-17</rotw>
+	<rotx>-0.9968928254408416</rotx>
+	<roty>8.745198625757912E-18</roty>
+	<rotz>0.07876988374103232</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
@@ -923,13 +923,13 @@
 </drivable>
 
 <ZframeToRAS>
-	<x>72.99999999999896</x>
+	<x>72.4415774873882</x>
 	<y>76.5</y>
-	<z>28.999990247690103</z>
-	<rotw>-3.3306690738754647E-16</rotw>
-	<rotx>-0.9999999999999941</rotx>
-	<roty>-3.0015008159073775E-23</roty>
-	<rotz>1.0835899877857742E-7</rotz>
+	<z>21.932738123398007</z>
+	<rotw>-5.5338669597954694E-17</rotw>
+	<rotx>-0.9968928254408416</rotx>
+	<roty>8.745198625757912E-18</roty>
+	<rotz>0.07876988374103232</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
