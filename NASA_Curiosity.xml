@@ -476,6 +476,60 @@
 		<Theta>0.0</Theta>
 		<Radius>45.0</Radius>
 		<Alpha>90.0</Alpha>
+
+		<mobilebase>
+	<cadEngine>
+		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
+		<file>ThreeDPrintCad.groovy</file>
+	</cadEngine>
+	<driveEngine>
+		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
+		<file>WalkingDriveEngine.groovy</file>
+	</driveEngine>
+
+<name>fixedWheelLeft</name>
+
+<ZframeToRAS>
+	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
+</ZframeToRAS>
+
+<baseToZframe>
+	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
+</baseToZframe>
+	<mass>0.5</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+<vitamins>
+
+</vitamins>
+
+</mobilebase>
+
 	</DHParameters>
 
 </link>
@@ -677,6 +731,60 @@
 		<Theta>0.0</Theta>
 		<Radius>45.0</Radius>
 		<Alpha>90.0</Alpha>
+
+		<mobilebase>
+	<cadEngine>
+		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
+		<file>ThreeDPrintCad.groovy</file>
+	</cadEngine>
+	<driveEngine>
+		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
+		<file>WalkingDriveEngine.groovy</file>
+	</driveEngine>
+
+<name>fixedWheelRight</name>
+
+<ZframeToRAS>
+	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
+</ZframeToRAS>
+
+<baseToZframe>
+	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
+</baseToZframe>
+	<mass>0.5</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz></imuFromCentroid>
+
+<vitamins>
+
+</vitamins>
+
+</mobilebase>
+
 	</DHParameters>
 
 </link>
