@@ -99,8 +99,8 @@ return new com.neuronrobotics.sdk.addons.kinematics.IDriveEngine (){
 					double delta = joints[wheelIndex]-steer;
 					joints[wheelIndex]=steer;
 					double bestTime = LimbWithWheel.getBestTime(joints)
-					if(delta>1)
-					 println "Speed for steering link "+(delta/bestTime)+" degrees per second"
+//					if(delta>1)
+//					 println "Speed for steering link "+(delta/bestTime)+" degrees per second"
 					LimbWithWheel.setDesiredJointAxisValue(wheelIndex,steer,bestTime)
 				}catch(Exception e){
 					e.printStackTrace(System.out)
