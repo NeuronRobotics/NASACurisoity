@@ -34,10 +34,11 @@ return new ICadGenerator(){
 		AbstractLink abstractLink = d.getAbstractLink(linkIndex);// Transform used by the UI to render the location of the object
 		// Transform used by the UI to render the location of the object
 		Affine manipulator = dh.getListener();
+		boolean right =d.getRobotToFiducialTransform().getY()>0;
+		
 		if (linkIndex==0 && d.getNumberOfLinks()==3){
 			CSG steer;
 			CSG rocker
-			boolean right =d.getRobotToFiducialTransform().getY()>0;
 			Transform stepTf = TransformFactory.nrToCSG(d.getDHStep(0).inverse())
 								.apply(
 									new Transform()
@@ -80,6 +81,7 @@ return new ICadGenerator(){
 			"https://github.com/NeuronRobotics/NASACurisoity.git",
 			"STL/steering-bracket.STL");
 			CSG steer = Vitamins.get(steer_file)
+							.roty(right?180:0)
 
 			steer.setManipulator(manipulator)
 			allCad.add(steer)
