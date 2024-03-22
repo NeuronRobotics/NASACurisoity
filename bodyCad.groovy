@@ -2,7 +2,12 @@ import com.neuronrobotics.bowlerstudio.creature.ICadGenerator;
 import com.neuronrobotics.bowlerstudio.creature.CreatureLab;
 import org.apache.commons.io.IOUtils;
 import com.neuronrobotics.bowlerstudio.vitamins.*;
+import com.neuronrobotics.sdk.addons.kinematics.DHParameterKinematics
+import com.neuronrobotics.sdk.addons.kinematics.MobileBase
+
 import java.nio.file.Paths;
+
+import eu.mihosoft.vrl.v3d.CSG
 import eu.mihosoft.vrl.v3d.FileUtil;
 import com.neuronrobotics.bowlerstudio.vitamins.*;
 println "Loading STL file"
@@ -91,13 +96,15 @@ return new ICadGenerator(){
 		FileUtil.write(Paths.get(LSP2R_file.getAbsolutePath()),
 							LSP2R.toStlString());
 */
-		body.setManipulator(b.getRootListener());
-		body.setColor(javafx.scene.paint.Color.WHITE)
 		def parts = [body ,USP1R,LSP1R,USP2R,LSP2R,USP1L,LSP1L,USP2L,LSP2L ] as ArrayList<CSG>
 		
-		for(int i=1;i<parts.size();i++){
-			parts.get(i).setColor(javafx.scene.paint.Color.GRAY)
+		for(int i=0;i<parts.size();i++){
+			parts.get(i)
+				.setColor(javafx.scene.paint.Color.GRAY)
+				.setManipulator(b.getRootListener())
 		}
+		body.setColor(javafx.scene.paint.Color.WHITE)
+		
 		return parts;
 	}
 };
