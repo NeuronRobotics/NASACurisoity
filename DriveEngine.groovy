@@ -12,12 +12,31 @@ import javafx.scene.transform.*;
 return new com.neuronrobotics.sdk.addons.kinematics.IDriveEngine (){
 	public ArrayList<DHParameterKinematics> getAllDHChains(MobileBase source) {
 		ArrayList<DHParameterKinematics> copy = new ArrayList<DHParameterKinematics>();
+		copy.addAll(getSteerable(source))
+		copy.addAll(getDrivable(source))
+		return copy;
+	}
+	public ArrayList<DHParameterKinematics> getSteerable(MobileBase source) {
+		ArrayList<DHParameterKinematics> copy = new ArrayList<DHParameterKinematics>();
 
-		for (DHParameterKinematics l : source.getSteerable()) {
-			copy.add(l);
+		copy.addAll(source.getSteerable());
+
+		for(DHParameterKinematics k:source.getAllDHChains()) {
+			for(int i=0;i<k.getNumberOfLinks();i++) {
+				if(k.getFollowerMobileBase(i)!=null)
+					copy.addAll(getSteerable(k.getFollowerMobileBase(i)))
+			}
 		}
-		for (DHParameterKinematics l : source.getDrivable()) {
-			copy.add(l);
+		return copy;
+	}
+	public ArrayList<DHParameterKinematics> getDrivable(MobileBase source) {
+		ArrayList<DHParameterKinematics> copy = new ArrayList<DHParameterKinematics>();
+		copy.addAll(source.getDrivable());
+		for(DHParameterKinematics k:source.getAllDHChains()) {
+			for(int i=0;i<k.getNumberOfLinks();i++) {
+				if(k.getFollowerMobileBase(i)!=null)
+					copy.addAll(getDrivable(k.getFollowerMobileBase(i)))
+			}
 		}
 		return copy;
 	}
@@ -25,7 +44,7 @@ return new com.neuronrobotics.sdk.addons.kinematics.IDriveEngine (){
 	public void DriveArc(MobileBase source, TransformNR newPose, double seconds) {
 		newPose = newPose.inverse()
 		ArrayList<DHParameterKinematics> wheels = getAllDHChains( source)
-		ArrayList<DHParameterKinematics> steerable = source.getSteerable();
+		ArrayList<DHParameterKinematics> steerable = getSteerable(source);
 		
 		for(int i=0;i<wheels.size();i++){
 			// Get the current pose of the robots base
@@ -38,7 +57,7 @@ return new com.neuronrobotics.sdk.addons.kinematics.IDriveEngine (){
 			global=global.times(newPose);// new global pose
 			DHParameterKinematics thisWheel =wheels.get(i)
 			// get the pose of this wheel
-			TransformNR wheelStarting = thisWheel.getRobotToFiducialTransform();
+			TransformNR wheelStarting = source.forwardOffset(thisWheel.getRobotToFiducialTransform());
 			Matrix btt =  wheelStarting.getMatrixTransform();
 			Matrix ftb = global.getMatrixTransform();// our new target
 			Matrix mForward = ftb.times(btt)
