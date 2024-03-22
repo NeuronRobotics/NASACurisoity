@@ -47,8 +47,8 @@ return new com.neuronrobotics.sdk.addons.kinematics.IDriveEngine (){
 		HashMap<DHParameterKinematics,MobileBase>  wheels = getAllDHChains( ogSource)
 		HashMap<DHParameterKinematics,MobileBase> steerable = getSteerable(ogSource);
 		//println "\n\n"
-		for(DHParameterKinematics thisWheel:wheels.keySet()){
-			MobileBase wheelSource=wheels.get(thisWheel);
+		for(DHParameterKinematics LimbWithWheel:wheels.keySet()){
+			MobileBase wheelSource=wheels.get(LimbWithWheel);
 			// Get the current pose of the robots base
 			TransformNR global= ogSource.getFiducialToGlobalTransform();
 			// set a new one if null
@@ -57,8 +57,14 @@ return new com.neuronrobotics.sdk.addons.kinematics.IDriveEngine (){
 				ogSource.setGlobalToFiducialTransform(global)
 			}
 			global=global.times(newPose);// new global pose
+			int wheelIndex =LimbWithWheel.getNumberOfLinks()>=3?1:0;
+			ArrayList<TransformNR> tipChain = LimbWithWheel.getChain().getChain(LimbWithWheel.getCurrentJointSpaceTarget())
 			// get the pose of this wheel
-			TransformNR wheelStarting = wheelSource.forwardOffset(thisWheel.getRobotToFiducialTransform());
+			TransformNR wheelStarting;
+			if(wheelIndex==0)
+				wheelStarting = wheelSource.forwardOffset(LimbWithWheel.getRobotToFiducialTransform());
+			else
+				wheelStarting= wheelSource.forwardOffset(tipChain.get(LimbWithWheel.getNumberOfLinks()-3))
 			Matrix btt =  wheelStarting.getMatrixTransform();
 			Matrix ftb = global.getMatrixTransform();// our new target
 			Matrix mForward = ftb.times(btt)
@@ -82,31 +88,31 @@ return new com.neuronrobotics.sdk.addons.kinematics.IDriveEngine (){
 				steer=steer+180
 				reverseWheel=true;
 			}
-			ArrayList<DHLink> dhLinks = thisWheel.getChain().getLinks()
+			ArrayList<DHLink> dhLinks = LimbWithWheel.getChain().getLinks()
 			
-			int wheelIndex =thisWheel.getNumberOfLinks()==3?1:0;
 			
-			if(steerable.get(thisWheel)!=null){
+			if(steerable.get(LimbWithWheel)!=null){
 				//println "\n\n"+i+" XY plane distance "+xyplaneDistance
-				//println "Steer angle "+steer
+				//println LimbWithWheel.getScriptingName()+" Steer angle "+steer
 				try{
-					double[] joints=thisWheel.getCurrentJointSpaceVector();
+					double[] joints=LimbWithWheel.getCurrentJointSpaceVector();
 					double delta = joints[wheelIndex]-steer;
 					joints[wheelIndex]=steer;
-					double bestTime = thisWheel.getBestTime(joints)
+					double bestTime = LimbWithWheel.getBestTime(joints)
 					if(delta>1)
 					 println "Speed for steering link "+(delta/bestTime)+" degrees per second"
-					thisWheel.setDesiredJointAxisValue(wheelIndex,steer,bestTime)
+					LimbWithWheel.setDesiredJointAxisValue(wheelIndex,steer,bestTime)
 				}catch(Exception e){
 					e.printStackTrace(System.out)
 				}
-				wheelIndex=wheelIndex+1;
+				wheelIndex+=1;
+			}else {
 			}
 			DHLink dh = dhLinks.get(wheelIndex)
 			// Hardware to engineering units configuration
-			LinkConfiguration conf = thisWheel.getLinkConfiguration(wheelIndex);
+			LinkConfiguration conf = LimbWithWheel.getLinkConfiguration(wheelIndex);
 			// Engineering units to kinematics link (limits and hardware type abstraction)
-			AbstractLink abstractLink = thisWheel.getAbstractLink(wheelIndex);// Transform used by the UI to render the location of the object
+			AbstractLink abstractLink = LimbWithWheel.getAbstractLink(wheelIndex);// Transform used by the UI to render the location of the object
 			// Transform used by the UI to render the location of the object
 			Affine manipulator = dh.getListener();
 			double radiusOfWheel = dh.getR()
@@ -114,9 +120,13 @@ return new com.neuronrobotics.sdk.addons.kinematics.IDriveEngine (){
 			if(Math.abs(xyplaneDistance)>0.01){
 				theta=Math.toDegrees(xyplaneDistance/radiusOfWheel)*(reverseWheel?-1:1)
 			}
-			double currentWheel= thisWheel.getCurrentJointSpaceVector()[wheelIndex]
+			double[] currVal=LimbWithWheel.getCurrentJointSpaceVector();
 			try{
-				thisWheel.setDesiredJointAxisValue(wheelIndex,theta+currentWheel,seconds);
+				currVal[wheelIndex]+=theta
+				double best = LimbWithWheel.getBestTime(currVal);
+				if(best>seconds)
+					seconds=best;
+				LimbWithWheel.setDesiredJointAxisValue(wheelIndex,currVal[wheelIndex],seconds);
 			}catch(Exception e){
 					e.printStackTrace(System.out)
 			}
