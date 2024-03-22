@@ -250,10 +250,10 @@
 >	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>1.0</rotw>
+	<rotw>8.726646248878822E-5</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
-	<rotz>-0.0</rotz>
+	<rotz>-0.9999999961922823</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
@@ -395,10 +395,10 @@
 >	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>1.0</rotw>
+	<rotw>8.726646248878822E-5</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
-	<rotz>-0.0</rotz>
+	<rotz>-0.9999999961922823</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
@@ -423,6 +423,62 @@
 		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
 		<file>DefaultDhSolver.groovy</file>
 	</kinematics>
+<link>
+	<name>leftRocker</name>
+	<deviceName>virtual</deviceName>
+	<type>virtual</type>
+	<index>1</index>
+	<scale>1.0</scale>
+	<upperLimit>255.0</upperLimit>
+	<lowerLimit>0.0</lowerLimit>
+	<upperVelocity>233.7089552238806</upperVelocity>
+	<lowerVelocity>-233.7089552238806</lowerVelocity>
+	<staticOffset>133.7089552238806</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
+	<isLatch>true</isLatch>
+	<indexLatch>105.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>hobbyServo</type>
+			<id>standardMicro</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>hobbyServoHorn</type>
+			<id>standardMicro1</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>true</passive>
+	<mass>0.001</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>0.0</rotx>
+	<roty>0.0</roty>
+	<rotz>0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>0.0</rotx>
+	<roty>0.0</roty>
+	<rotz>0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>0.0</Delta>
+		<Theta>0.0</Theta>
+		<Radius>40.0</Radius>
+		<Alpha>0.0</Alpha>
+	</DHParameters>
+
+</link>
 <link>
 	<name>bl_steer</name>
 	<deviceName>dyio</deviceName>
@@ -540,10 +596,10 @@
 >	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>1.0</rotw>
+	<rotw>8.726646248878822E-5</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
-	<rotz>-0.0</rotz>
+	<rotz>-0.9999999961922823</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
@@ -568,6 +624,62 @@
 		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
 		<file>DefaultDhSolver.groovy</file>
 	</kinematics>
+<link>
+	<name>rightRocker</name>
+	<deviceName>virtual</deviceName>
+	<type>virtual</type>
+	<index>2</index>
+	<scale>1.0</scale>
+	<upperLimit>255.0</upperLimit>
+	<lowerLimit>0.0</lowerLimit>
+	<upperVelocity>233.7089552238806</upperVelocity>
+	<lowerVelocity>-233.7089552238806</lowerVelocity>
+	<staticOffset>133.7089552238806</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
+	<isLatch>true</isLatch>
+	<indexLatch>105.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>hobbyServo</type>
+			<id>standardMicro</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>hobbyServoHorn</type>
+			<id>standardMicro1</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>true</passive>
+	<mass>0.001</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>0.0</rotx>
+	<roty>0.0</roty>
+	<rotz>0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>0.0</rotx>
+	<roty>0.0</roty>
+	<rotz>0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>0.0</Delta>
+		<Theta>0.0</Theta>
+		<Radius>40.0</Radius>
+		<Alpha>0.0</Alpha>
+	</DHParameters>
+
+</link>
 <link>
 	<name>br_steer</name>
 	<deviceName>dyio</deviceName>
@@ -685,10 +797,10 @@
 >	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>1.0</rotw>
+	<rotw>8.726646248878822E-5</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
-	<rotz>-0.0</rotz>
+	<rotz>-0.9999999961922823</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
@@ -830,10 +942,10 @@
 >	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>1.0</rotw>
+	<rotw>8.726646248878822E-5</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
-	<rotz>-0.0</rotz>
+	<rotz>-0.9999999961922823</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
@@ -919,10 +1031,10 @@
 >	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>1.0</rotw>
+	<rotw>8.726646248878822E-5</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
-	<rotz>-0.0</rotz>
+	<rotz>-0.9999999961922823</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
@@ -1008,10 +1120,10 @@
 >	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>1.0</rotw>
+	<rotw>8.726646248878822E-5</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
-	<rotz>-0.0</rotz>
+	<rotz>-0.9999999961922823</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
@@ -1040,10 +1152,10 @@
 	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>1.0</rotw>
+	<rotw>8.726646248878822E-5</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
-	<rotz>-0.0</rotz>
+	<rotz>-0.9999999961922823</rotz>
 </baseToZframe>
 	<mass>0.1</mass>
 	<centerOfMassFromCentroid>	<x>0.0</x>
