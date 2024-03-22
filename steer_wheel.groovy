@@ -39,12 +39,14 @@ return new ICadGenerator(){
 			CSG rocker
 			boolean right =d.getRobotToFiducialTransform().getY()>0;
 			Transform stepTf = TransformFactory.nrToCSG(d.getDHStep(0).inverse())
-								.movex(-28)
-								.movey(8.5*(right?-1:1))
-								.movez(-29)
-								.rotx(90)
+								.apply(
+									new Transform()
+										.movex(-28)
+										.movey(8.5*(right?-1:1))
+										.movez(-29)
+										.rotx(90));
 			if(right) {
-				Transform tf = stepTf.apply( new Transform());
+				Transform tf = stepTf
 				
 					steer = Vitamins.get(ScriptingEngine.fileFromGit(
 				"https://github.com/NeuronRobotics/NASACurisoity.git",
@@ -54,7 +56,7 @@ return new ICadGenerator(){
 						"STL/lower-suspension-p1-right.STL")).transformed(tf)
 	
 			}else {
-				Transform tf =stepTf.apply( new Transform());
+				Transform tf =stepTf
 				
 					steer= Vitamins.get(ScriptingEngine.fileFromGit(
 					"https://github.com/NeuronRobotics/NASACurisoity.git",
