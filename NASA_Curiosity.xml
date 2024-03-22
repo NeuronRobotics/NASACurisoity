@@ -488,6 +488,95 @@
 	</driveEngine>
 
 <name>fixedWheelLeft</name>
+<drivable>
+
+<name>Center_Left</name>
+	<cadEngine>
+		<git>https://github.com/NeuronRobotics/NASACurisoity.git</git>
+		<file>fixed_wheel.groovy</file>
+	</cadEngine>
+	<kinematics>
+		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
+		<file>DefaultDhSolver.groovy</file>
+	</kinematics>
+<link>
+	<name>cl_wheel</name>
+	<deviceName>pid</deviceName>
+	<type>pid</type>
+	<index>1</index>
+	<scale>0.33</scale>
+	<upperLimit>1000000.0</upperLimit>
+	<lowerLimit>-1000000.0</lowerLimit>
+	<upperVelocity>1.0E8</upperVelocity>
+	<lowerVelocity>-1.0E8</lowerVelocity>
+	<staticOffset>162.25373134328353</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
+	<isLatch>true</isLatch>
+	<indexLatch>171.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>hobbyServo</type>
+			<id>standardMicro</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>hobbyServoHorn</type>
+			<id>standardMicro1</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.001</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>0.0</rotx>
+	<roty>0.0</roty>
+	<rotz>0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>0.0</rotx>
+	<roty>0.0</roty>
+	<rotz>0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>0.0</Delta>
+		<Theta>0.0</Theta>
+		<Radius>18.0</Radius>
+		<Alpha>-90.0</Alpha>
+	</DHParameters>
+
+</link>
+
+<ZframeToRAS
+>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
+</ZframeToRAS>
+
+<baseToZframe>
+	<x>-3.1554436208840472E-30</x>
+	<y>-74.0</y>
+	<z>1.6431300764452317E-14</z>
+	<rotw>0.7071067811864769</rotw>
+	<rotx>0.7071067811866182</rotx>
+	<roty>-8.120692378443806E-12</roty>
+	<rotz>8.12069237844543E-12</rotz>
+</baseToZframe>
+
+</drivable>
 
 <ZframeToRAS>
 	<x>0.0</x>
@@ -743,7 +832,95 @@
 	</driveEngine>
 
 <name>fixedWheelRight</name>
+<drivable>
 
+<name>Center_Right</name>
+	<cadEngine>
+		<git>https://github.com/NeuronRobotics/NASACurisoity.git</git>
+		<file>fixed_wheel.groovy</file>
+	</cadEngine>
+	<kinematics>
+		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
+		<file>DefaultDhSolver.groovy</file>
+	</kinematics>
+<link>
+	<name>cr_wheel</name>
+	<deviceName>pid</deviceName>
+	<type>pid</type>
+	<index>4</index>
+	<scale>0.33</scale>
+	<upperLimit>1000000.0</upperLimit>
+	<lowerLimit>-1000000.0</lowerLimit>
+	<upperVelocity>1.0E8</upperVelocity>
+	<lowerVelocity>-1.0E8</lowerVelocity>
+	<staticOffset>122.2910447761194</staticOffset>
+	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
+	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
+	<isLatch>true</isLatch>
+	<indexLatch>128.0</indexLatch>
+	<isStopOnLatch>false</isStopOnLatch>
+	<homingTPS>10000000</homingTPS>
+
+	<vitamins>
+		<vitamin>
+			<name>electroMechanical</name>
+			<type>hobbyServo</type>
+			<id>standardMicro</id>
+		</vitamin>
+		<vitamin>
+			<name>shaft</name>
+			<type>hobbyServoHorn</type>
+			<id>standardMicro1</id>
+		</vitamin>
+
+	</vitamins>
+	<passive>false</passive>
+	<mass>0.001</mass>
+	<centerOfMassFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>0.0</rotx>
+	<roty>0.0</roty>
+	<rotz>0.0</rotz></centerOfMassFromCentroid>
+	<imuFromCentroid>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>0.0</rotx>
+	<roty>0.0</roty>
+	<rotz>0.0</rotz></imuFromCentroid>
+
+	<DHParameters>
+		<Delta>0.0</Delta>
+		<Theta>0.0</Theta>
+		<Radius>18.0</Radius>
+		<Alpha>-90.0</Alpha>
+	</DHParameters>
+
+</link>
+
+<ZframeToRAS
+>	<x>0.0</x>
+	<y>0.0</y>
+	<z>0.0</z>
+	<rotw>1.0</rotw>
+	<rotx>-0.0</rotx>
+	<roty>-0.0</roty>
+	<rotz>-0.0</rotz>
+</ZframeToRAS>
+
+<baseToZframe>
+	<x>3.1554436208840472E-30</x>
+	<y>74.0</y>
+	<z>-1.6431300764452317E-14</z>
+	<rotw>0.7071068308015699</rotw>
+	<rotx>0.7071067315258514</rotx>
+	<roty>-5.68276839071908E-6</roty>
+	<rotz>5.682767592875118E-6</rotz>
+</baseToZframe>
+
+</drivable>
 <ZframeToRAS>
 	<x>0.0</x>
 	<y>0.0</y>
@@ -1067,184 +1244,7 @@
 </baseToZframe>
 
 </steerable>
-<drivable>
 
-<name>Center_Left</name>
-	<cadEngine>
-		<git>https://github.com/NeuronRobotics/NASACurisoity.git</git>
-		<file>fixed_wheel.groovy</file>
-	</cadEngine>
-	<kinematics>
-		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
-		<file>DefaultDhSolver.groovy</file>
-	</kinematics>
-<link>
-	<name>cl_wheel</name>
-	<deviceName>pid</deviceName>
-	<type>pid</type>
-	<index>1</index>
-	<scale>0.33</scale>
-	<upperLimit>1000000.0</upperLimit>
-	<lowerLimit>-1000000.0</lowerLimit>
-	<upperVelocity>1.0E8</upperVelocity>
-	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>162.25373134328353</staticOffset>
-	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
-	<isLatch>true</isLatch>
-	<indexLatch>171.0</indexLatch>
-	<isStopOnLatch>false</isStopOnLatch>
-	<homingTPS>10000000</homingTPS>
-
-	<vitamins>
-		<vitamin>
-			<name>electroMechanical</name>
-			<type>hobbyServo</type>
-			<id>standardMicro</id>
-		</vitamin>
-		<vitamin>
-			<name>shaft</name>
-			<type>hobbyServoHorn</type>
-			<id>standardMicro1</id>
-		</vitamin>
-
-	</vitamins>
-	<passive>false</passive>
-	<mass>0.001</mass>
-	<centerOfMassFromCentroid>	<x>0.0</x>
-	<y>0.0</y>
-	<z>0.0</z>
-	<rotw>1.0</rotw>
-	<rotx>0.0</rotx>
-	<roty>0.0</roty>
-	<rotz>0.0</rotz></centerOfMassFromCentroid>
-	<imuFromCentroid>	<x>0.0</x>
-	<y>0.0</y>
-	<z>0.0</z>
-	<rotw>1.0</rotw>
-	<rotx>0.0</rotx>
-	<roty>0.0</roty>
-	<rotz>0.0</rotz></imuFromCentroid>
-
-	<DHParameters>
-		<Delta>0.0</Delta>
-		<Theta>0.0</Theta>
-		<Radius>18.0</Radius>
-		<Alpha>-90.0</Alpha>
-	</DHParameters>
-
-</link>
-
-<ZframeToRAS
->	<x>0.0</x>
-	<y>0.0</y>
-	<z>0.0</z>
-	<rotw>1.0</rotw>
-	<rotx>-0.0</rotx>
-	<roty>-0.0</roty>
-	<rotz>-0.0</rotz>
-</ZframeToRAS>
-
-<baseToZframe>
-	<x>-3.1554436208840472E-30</x>
-	<y>-74.0</y>
-	<z>1.6431300764452317E-14</z>
-	<rotw>0.7071067811864769</rotw>
-	<rotx>0.7071067811866182</rotx>
-	<roty>-8.120692378443806E-12</roty>
-	<rotz>8.12069237844543E-12</rotz>
-</baseToZframe>
-
-</drivable>
-<drivable>
-
-<name>Center_Right</name>
-	<cadEngine>
-		<git>https://github.com/NeuronRobotics/NASACurisoity.git</git>
-		<file>fixed_wheel.groovy</file>
-	</cadEngine>
-	<kinematics>
-		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
-		<file>DefaultDhSolver.groovy</file>
-	</kinematics>
-<link>
-	<name>cr_wheel</name>
-	<deviceName>pid</deviceName>
-	<type>pid</type>
-	<index>4</index>
-	<scale>0.33</scale>
-	<upperLimit>1000000.0</upperLimit>
-	<lowerLimit>-1000000.0</lowerLimit>
-	<upperVelocity>1.0E8</upperVelocity>
-	<lowerVelocity>-1.0E8</lowerVelocity>
-	<staticOffset>122.2910447761194</staticOffset>
-	<deviceTheoreticalMax>2.147483647E9</deviceTheoreticalMax>
-	<deviceTheoreticalMin>-2.147483648E9</deviceTheoreticalMin>
-	<isLatch>true</isLatch>
-	<indexLatch>128.0</indexLatch>
-	<isStopOnLatch>false</isStopOnLatch>
-	<homingTPS>10000000</homingTPS>
-
-	<vitamins>
-		<vitamin>
-			<name>electroMechanical</name>
-			<type>hobbyServo</type>
-			<id>standardMicro</id>
-		</vitamin>
-		<vitamin>
-			<name>shaft</name>
-			<type>hobbyServoHorn</type>
-			<id>standardMicro1</id>
-		</vitamin>
-
-	</vitamins>
-	<passive>false</passive>
-	<mass>0.001</mass>
-	<centerOfMassFromCentroid>	<x>0.0</x>
-	<y>0.0</y>
-	<z>0.0</z>
-	<rotw>1.0</rotw>
-	<rotx>0.0</rotx>
-	<roty>0.0</roty>
-	<rotz>0.0</rotz></centerOfMassFromCentroid>
-	<imuFromCentroid>	<x>0.0</x>
-	<y>0.0</y>
-	<z>0.0</z>
-	<rotw>1.0</rotw>
-	<rotx>0.0</rotx>
-	<roty>0.0</roty>
-	<rotz>0.0</rotz></imuFromCentroid>
-
-	<DHParameters>
-		<Delta>0.0</Delta>
-		<Theta>0.0</Theta>
-		<Radius>18.0</Radius>
-		<Alpha>-90.0</Alpha>
-	</DHParameters>
-
-</link>
-
-<ZframeToRAS
->	<x>0.0</x>
-	<y>0.0</y>
-	<z>0.0</z>
-	<rotw>1.0</rotw>
-	<rotx>-0.0</rotx>
-	<roty>-0.0</roty>
-	<rotz>-0.0</rotz>
-</ZframeToRAS>
-
-<baseToZframe>
-	<x>3.1554436208840472E-30</x>
-	<y>74.0</y>
-	<z>-1.6431300764452317E-14</z>
-	<rotw>0.7071068308015699</rotw>
-	<rotx>0.7071067315258514</rotx>
-	<roty>-5.68276839071908E-6</roty>
-	<rotz>5.682767592875118E-6</rotz>
-</baseToZframe>
-
-</drivable>
 
 <ZframeToRAS>
 	<x>0.0</x>
