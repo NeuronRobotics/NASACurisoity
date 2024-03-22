@@ -250,10 +250,10 @@
 >	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>8.726646248878822E-5</rotw>
+	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
-	<rotz>-0.9999999961922823</rotz>
+	<rotz>-0.0</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
@@ -395,10 +395,10 @@
 >	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>8.726646248878822E-5</rotw>
+	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
-	<rotz>-0.9999999961922823</rotz>
+	<rotz>-0.0</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
@@ -596,10 +596,10 @@
 >	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>8.726646248878822E-5</rotw>
+	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
-	<rotz>-0.9999999961922823</rotz>
+	<rotz>-0.0</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
@@ -797,10 +797,10 @@
 >	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>8.726646248878822E-5</rotw>
+	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
-	<rotz>-0.9999999961922823</rotz>
+	<rotz>-0.0</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
@@ -942,10 +942,10 @@
 >	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>8.726646248878822E-5</rotw>
+	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
-	<rotz>-0.9999999961922823</rotz>
+	<rotz>-0.0</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
@@ -1031,20 +1031,20 @@
 >	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>8.726646248878822E-5</rotw>
+	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
-	<rotz>-0.9999999961922823</rotz>
+	<rotz>-0.0</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
 	<x>-3.1554436208840472E-30</x>
 	<y>-74.0</y>
 	<z>1.6431300764452317E-14</z>
-	<rotw>0.006170592410918338</rotw>
-	<rotx>0.006170592427160763</rotx>
-	<roty>0.7070798567270872</roty>
-	<rotz>0.7070798567270871</rotz>
+	<rotw>0.7071067811864769</rotw>
+	<rotx>0.7071067811866182</rotx>
+	<roty>-8.120692378443806E-12</roty>
+	<rotz>8.12069237844543E-12</rotz>
 </baseToZframe>
 
 </drivable>
@@ -1120,20 +1120,20 @@
 >	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>8.726646248878822E-5</rotw>
+	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
-	<rotz>-0.9999999961922823</rotz>
+	<rotz>-0.0</rotz>
 </ZframeToRAS>
 
 <baseToZframe>
 	<x>3.1554436208840472E-30</x>
 	<y>74.0</y>
 	<z>-1.6431300764452317E-14</z>
-	<rotw>0.006164910275843254</rotw>
-	<rotx>0.006176274512728991</rotx>
-	<roty>0.7070797574776199</roty>
-	<rotz>0.7070799559313109</rotz>
+	<rotw>0.7071068308015699</rotw>
+	<rotx>0.7071067315258514</rotx>
+	<roty>-5.68276839071908E-6</roty>
+	<rotz>5.682767592875118E-6</rotz>
 </baseToZframe>
 
 </drivable>
@@ -1152,13 +1152,13 @@
 	<x>0.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
-	<rotw>8.726646248878822E-5</rotw>
+	<rotw>1.0</rotw>
 	<rotx>-0.0</rotx>
 	<roty>-0.0</roty>
-	<rotz>-0.9999999961922823</rotz>
+	<rotz>-0.0</rotz>
 </baseToZframe>
 	<mass>0.1</mass>
-	<centerOfMassFromCentroid>	<x>0.0</x>
+	<centerOfMassFromCentroid>	<x>-20.0</x>
 	<y>0.0</y>
 	<z>40.0</z>
 	<rotw>1.0</rotw>

@@ -1,4 +1,11 @@
 //Your code here
+import com.neuronrobotics.sdk.addons.kinematics.AbstractLink
+import com.neuronrobotics.sdk.addons.kinematics.DHLink
+import com.neuronrobotics.sdk.addons.kinematics.DHParameterKinematics
+import com.neuronrobotics.sdk.addons.kinematics.LinkConfiguration
+import com.neuronrobotics.sdk.addons.kinematics.MobileBase
+import com.neuronrobotics.sdk.addons.kinematics.math.TransformNR
+
 import Jama.Matrix;
 import javafx.scene.transform.*;
 
@@ -56,17 +63,23 @@ return new com.neuronrobotics.sdk.addons.kinematics.IDriveEngine (){
 			}
 			ArrayList<DHLink> dhLinks = thisWheel.getChain().getLinks()
 			
-			int wheelIndex =0;
+			int wheelIndex =thisWheel.getNumberOfLinks()==3?1:0;
 			
 			if(steerable.contains(thisWheel)){
 				//println "\n\n"+i+" XY plane distance "+xyplaneDistance
 				//println "Steer angle "+steer
 				try{
-					thisWheel.setDesiredJointAxisValue(0,steer,0)
+					double[] joints=thisWheel.getCurrentJointSpaceVector();
+					double delta = joints[wheelIndex]-steer;
+					joints[wheelIndex]=steer;
+					double bestTime = thisWheel.getBestTime(joints)
+					if(delta>1)
+					 println "Speed for steering link "+(delta/bestTime)+" degrees per second"
+					thisWheel.setDesiredJointAxisValue(wheelIndex,steer,bestTime)
 				}catch(Exception e){
 					e.printStackTrace(System.out)
 				}
-				wheelIndex=1
+				wheelIndex=wheelIndex+1;
 			}
 			DHLink dh = dhLinks.get(wheelIndex)
 			// Hardware to engineering units configuration
