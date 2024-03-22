@@ -10,43 +10,45 @@ import Jama.Matrix;
 import javafx.scene.transform.*;
 
 return new com.neuronrobotics.sdk.addons.kinematics.IDriveEngine (){
-	public ArrayList<DHParameterKinematics> getAllDHChains(MobileBase source) {
-		ArrayList<DHParameterKinematics> copy = new ArrayList<DHParameterKinematics>();
-		copy.addAll(getSteerable(source))
-		copy.addAll(getDrivable(source))
+	public HashMap<DHParameterKinematics,MobileBase> getAllDHChains(MobileBase source) {
+		HashMap<DHParameterKinematics,MobileBase> copy = new HashMap<>();
+		copy.putAll(getSteerable(source))
+		copy.putAll(getDrivable(source))
 		return copy;
 	}
-	public ArrayList<DHParameterKinematics> getSteerable(MobileBase source) {
-		ArrayList<DHParameterKinematics> copy = new ArrayList<DHParameterKinematics>();
-
-		copy.addAll(source.getSteerable());
+	public HashMap<DHParameterKinematics,MobileBase> getSteerable(MobileBase source) {
+		HashMap<DHParameterKinematics,MobileBase> copy = new HashMap<>();
+		for(def k:source.getSteerable())
+			copy.put(k,source);
 
 		for(DHParameterKinematics k:source.getAllDHChains()) {
 			for(int i=0;i<k.getNumberOfLinks();i++) {
 				if(k.getFollowerMobileBase(i)!=null)
-					copy.addAll(getSteerable(k.getFollowerMobileBase(i)))
+					copy.putAll(getSteerable(k.getFollowerMobileBase(i)))
 			}
 		}
 		return copy;
 	}
-	public ArrayList<DHParameterKinematics> getDrivable(MobileBase source) {
-		ArrayList<DHParameterKinematics> copy = new ArrayList<DHParameterKinematics>();
-		copy.addAll(source.getDrivable());
+	public HashMap<DHParameterKinematics,MobileBase> getDrivable(MobileBase source) {
+		HashMap<DHParameterKinematics,MobileBase> copy = new HashMap<>();
+		for(def k:source.getDrivable())
+			copy.put(k,source);
 		for(DHParameterKinematics k:source.getAllDHChains()) {
 			for(int i=0;i<k.getNumberOfLinks();i++) {
 				if(k.getFollowerMobileBase(i)!=null)
-					copy.addAll(getDrivable(k.getFollowerMobileBase(i)))
+					copy.putAll(getDrivable(k.getFollowerMobileBase(i)))
 			}
 		}
 		return copy;
 	}
 	@Override
-	public void DriveArc(MobileBase source, TransformNR newPose, double seconds) {
+	public void DriveArc(MobileBase ogSource, TransformNR newPose, double seconds) {
 		newPose = newPose.inverse()
-		ArrayList<DHParameterKinematics> wheels = getAllDHChains( source)
-		ArrayList<DHParameterKinematics> steerable = getSteerable(source);
+		HashMap<DHParameterKinematics,MobileBase>  wheels = getAllDHChains( ogSource)
+		HashMap<DHParameterKinematics,MobileBase> steerable = getSteerable(ogSource);
 		
-		for(int i=0;i<wheels.size();i++){
+		for(DHParameterKinematics thisWheel:wheels.keySet()){
+			MobileBase source=wheels.get(thisWheel);
 			// Get the current pose of the robots base
 			TransformNR global= source.getFiducialToGlobalTransform();
 			// set a new one if null
@@ -55,7 +57,6 @@ return new com.neuronrobotics.sdk.addons.kinematics.IDriveEngine (){
 				source.setGlobalToFiducialTransform(global)
 			}
 			global=global.times(newPose);// new global pose
-			DHParameterKinematics thisWheel =wheels.get(i)
 			// get the pose of this wheel
 			TransformNR wheelStarting = source.forwardOffset(thisWheel.getRobotToFiducialTransform());
 			Matrix btt =  wheelStarting.getMatrixTransform();
@@ -84,7 +85,7 @@ return new com.neuronrobotics.sdk.addons.kinematics.IDriveEngine (){
 			
 			int wheelIndex =thisWheel.getNumberOfLinks()==3?1:0;
 			
-			if(steerable.contains(thisWheel)){
+			if(steerable.get(thisWheel)!=null){
 				//println "\n\n"+i+" XY plane distance "+xyplaneDistance
 				//println "Steer angle "+steer
 				try{
