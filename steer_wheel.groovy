@@ -1,4 +1,5 @@
 import com.neuronrobotics.bowlerstudio.creature.ICadGenerator;
+import com.neuronrobotics.bowlerstudio.physics.TransformFactory
 import com.neuronrobotics.bowlerstudio.scripting.ScriptingEngine
 import com.neuronrobotics.bowlerstudio.creature.CreatureLab;
 import org.apache.commons.io.IOUtils;
@@ -8,13 +9,14 @@ import com.neuronrobotics.sdk.addons.kinematics.DHLink
 import com.neuronrobotics.sdk.addons.kinematics.DHParameterKinematics
 import com.neuronrobotics.sdk.addons.kinematics.LinkConfiguration
 import com.neuronrobotics.sdk.addons.kinematics.MobileBase
+import com.neuronrobotics.sdk.addons.kinematics.math.TransformNR
 
 import java.nio.file.Paths;
 
 import eu.mihosoft.vrl.v3d.CSG
 import eu.mihosoft.vrl.v3d.FileUtil;
-import com.neuronrobotics.bowlerstudio.vitamins.*;
-import javafx.scene.transform.*;
+import eu.mihosoft.vrl.v3d.Transform
+import javafx.scene.transform.Affine
 println "Loading STL file"
 // Load an STL file from a git repo
 // Loading a local file also works here
@@ -34,27 +36,39 @@ return new ICadGenerator(){
 		Affine manipulator = dh.getListener();
 		if (linkIndex==0 && d.getNumberOfLinks()==3){
 			CSG steer;
-			
-			if(d.getRobotToFiducialTransform().getY()<0) {
-				File steer_file = ScriptingEngine.fileFromGit(
+			CSG rocker
+			boolean right =d.getRobotToFiducialTransform().getY()>0;
+			Transform stepTf = TransformFactory.nrToCSG(d.getDHStep(0).inverse())
+								.movex(-28)
+								.movey(8.5*(right?-1:1))
+								.movez(-29)
+								.rotx(90)
+			if(right) {
+				Transform tf = stepTf.apply( new Transform());
+				
+					steer = Vitamins.get(ScriptingEngine.fileFromGit(
 				"https://github.com/NeuronRobotics/NASACurisoity.git",
-				"STL/lower-suspension-p2-right.STL");
-					steer = Vitamins.get(steer_file)
-							.toXMin()
-							.toYMin()
-							.toZMin()
+				"STL/lower-suspension-p2-right.STL")).transformed(tf)
+				rocker= Vitamins.get(ScriptingEngine.fileFromGit(
+						"https://github.com/NeuronRobotics/NASACurisoity.git",
+						"STL/lower-suspension-p1-right.STL")).transformed(tf)
+	
 			}else {
-				File steer_file = ScriptingEngine.fileFromGit(
+				Transform tf =stepTf.apply( new Transform());
+				
+					steer= Vitamins.get(ScriptingEngine.fileFromGit(
 					"https://github.com/NeuronRobotics/NASACurisoity.git",
-					"STL/lower-suspension-p2-left.STL");
-						steer= Vitamins.get(steer_file)
-						.toXMin()
-						.toYMin()
-						.toZMin()
-			}
+					"STL/lower-suspension-p2-left.STL")).transformed(tf)
+					rocker= Vitamins.get(ScriptingEngine.fileFromGit(
+					"https://github.com/NeuronRobotics/NASACurisoity.git",
+					"STL/lower-suspension-p1-left.STL")).transformed(tf)
 
-			steer.setManipulator(manipulator)
-			allCad.add(steer)
+			}
+			def rockerParts=[steer,rocker]
+			for(CSG s:rockerParts) {
+				s.setManipulator(manipulator)
+				allCad.add(s)
+			}
 	
 		}
 		int offset = d.getNumberOfLinks()==2?0:1;

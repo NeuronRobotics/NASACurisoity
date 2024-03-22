@@ -28,9 +28,9 @@ return new ICadGenerator(){
 		File USP1R_file = ScriptingEngine.fileFromGit(
 			"https://github.com/NeuronRobotics/NASACurisoity.git",
 			"STL/upper-suspension-p1-right.STL");
-		File LSP1R_file = ScriptingEngine.fileFromGit(
-			"https://github.com/NeuronRobotics/NASACurisoity.git",
-			"STL/lower-suspension-p1-right.STL");
+//		File LSP1R_file = ScriptingEngine.fileFromGit(
+//			"https://github.com/NeuronRobotics/NASACurisoity.git",
+//			"STL/lower-suspension-p1-right.STL");
 		File USP2R_file= ScriptingEngine.fileFromGit(
 			"https://github.com/NeuronRobotics/NASACurisoity.git",
 			"STL/upper-suspension-p2-right.STL");
@@ -38,20 +38,20 @@ return new ICadGenerator(){
 		File USP1L_file = ScriptingEngine.fileFromGit(
 			"https://github.com/NeuronRobotics/NASACurisoity.git",
 			"STL/upper-suspension-p1-left.STL");
-		File LSP1L_file= ScriptingEngine.fileFromGit(
-			"https://github.com/NeuronRobotics/NASACurisoity.git",
-			"STL/lower-suspension-p1-left.STL");
+//		File LSP1L_file= ScriptingEngine.fileFromGit(
+//			"https://github.com/NeuronRobotics/NASACurisoity.git",
+//			"STL/lower-suspension-p1-left.STL");
 		File USP2L_file = ScriptingEngine.fileFromGit(
 			"https://github.com/NeuronRobotics/NASACurisoity.git",
 			"STL/upper-suspension-p2-left.STL");
 			
 		//changed
-		File LSP2R_file = ScriptingEngine.fileFromGit(
-			"https://github.com/NeuronRobotics/NASACurisoity.git",
-			"STL/lower-suspension-p2-right.STL");		
-		File LSP2L_file= ScriptingEngine.fileFromGit(
-			"https://github.com/NeuronRobotics/NASACurisoity.git",
-			"STL/lower-suspension-p2-left.STL");	
+//		File LSP2R_file = ScriptingEngine.fileFromGit(
+//			"https://github.com/NeuronRobotics/NASACurisoity.git",
+//			"STL/lower-suspension-p2-right.STL");		
+//		File LSP2L_file= ScriptingEngine.fileFromGit(
+//			"https://github.com/NeuronRobotics/NASACurisoity.git",
+//			"STL/lower-suspension-p2-left.STL");	
 		/*
 		double upperHeightAdjust = 2.175
 		double lowerAdjustAngle = 4.6
@@ -68,13 +68,13 @@ return new ICadGenerator(){
 		CSG body  = Vitamins.get(mainBodyFile)
 
 		CSG USP1R  = Vitamins.get(USP1R_file).movey(widthOfBody)
-		CSG LSP1R  = Vitamins.get(LSP1R_file).movey(widthOfBody)
+		//CSG LSP1R  = Vitamins.get(LSP1R_file).movey(widthOfBody)
 		CSG USP2R  = Vitamins.get(USP2R_file).movey(widthOfBody)
-		CSG LSP2R  = Vitamins.get(LSP2R_file).movey(widthOfBody)
+		//CSG LSP2R  = Vitamins.get(LSP2R_file).movey(widthOfBody)
 		CSG USP1L  = Vitamins.get(USP1L_file).movey(-widthOfBody)
-		CSG LSP1L  = Vitamins.get(LSP1L_file).movey(-widthOfBody)
+		//CSG LSP1L  = Vitamins.get(LSP1L_file).movey(-widthOfBody)
 		CSG USP2L  = Vitamins.get(USP2L_file).movey(-widthOfBody)
-		CSG LSP2L  = Vitamins.get(LSP2L_file).movey(-widthOfBody)
+		//CSG LSP2L  = Vitamins.get(LSP2L_file).movey(-widthOfBody)
 
 
 /*
@@ -96,7 +96,15 @@ return new ICadGenerator(){
 		FileUtil.write(Paths.get(LSP2R_file.getAbsolutePath()),
 							LSP2R.toStlString());
 */
-		def parts = [body ,USP1R,LSP1R,USP2R,LSP2R,USP1L,LSP1L,USP2L,LSP2L ] as ArrayList<CSG>
+		def parts = [body ,USP1R,
+			//LSP1R,
+			USP2R,
+			//LSP2R,
+			USP1L,
+			//LSP1L,
+			USP2L,
+			//LSP2L
+			 ]
 		
 		for(int i=0;i<parts.size();i++){
 			parts.get(i)
