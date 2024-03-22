@@ -46,23 +46,24 @@ return new com.neuronrobotics.sdk.addons.kinematics.IDriveEngine (){
 		newPose = newPose.inverse()
 		HashMap<DHParameterKinematics,MobileBase>  wheels = getAllDHChains( ogSource)
 		HashMap<DHParameterKinematics,MobileBase> steerable = getSteerable(ogSource);
-		
+		//println "\n\n"
 		for(DHParameterKinematics thisWheel:wheels.keySet()){
-			MobileBase source=wheels.get(thisWheel);
+			MobileBase wheelSource=wheels.get(thisWheel);
 			// Get the current pose of the robots base
-			TransformNR global= source.getFiducialToGlobalTransform();
+			TransformNR global= ogSource.getFiducialToGlobalTransform();
 			// set a new one if null
 			if(global==null){
 				global=new TransformNR()
-				source.setGlobalToFiducialTransform(global)
+				ogSource.setGlobalToFiducialTransform(global)
 			}
 			global=global.times(newPose);// new global pose
 			// get the pose of this wheel
-			TransformNR wheelStarting = source.forwardOffset(thisWheel.getRobotToFiducialTransform());
+			TransformNR wheelStarting = wheelSource.forwardOffset(thisWheel.getRobotToFiducialTransform());
 			Matrix btt =  wheelStarting.getMatrixTransform();
 			Matrix ftb = global.getMatrixTransform();// our new target
 			Matrix mForward = ftb.times(btt)
 			TransformNR inc =new TransformNR( mForward);// this wheels new increment
+			//println thisWheel.getScriptingName()+" pose "+wheelStarting.getX()+" "+wheelStarting.getY()+" "+wheelStarting.getZ()
 			TransformNR vect =new TransformNR(btt.inverse().times(mForward));// this wheels new increment
 			double xyplaneDistance = Math.sqrt(
 										Math.pow(vect.getX(),2)+
