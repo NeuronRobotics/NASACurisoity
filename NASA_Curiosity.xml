@@ -367,7 +367,7 @@
 	</vitamins>
 	<passive>false</passive>
 	<mass>0.05</mass>
-	<centerOfMassFromCentroid>	<x>0.0</x>
+	<centerOfMassFromCentroid>	<x>-18.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
@@ -1200,7 +1200,7 @@
 	</vitamins>
 	<passive>false</passive>
 	<mass>0.05</mass>
-	<centerOfMassFromCentroid>	<x>0.0</x>
+	<centerOfMassFromCentroid>	<x>-18.0</x>
 	<y>0.0</y>
 	<z>0.0</z>
 	<rotw>1.0</rotw>
