@@ -1266,7 +1266,7 @@
 	<rotz>-0.0</rotz>
 </baseToZframe>
 	<mass>0.1</mass>
-	<centerOfMassFromCentroid>	<x>-20.0</x>
+	<centerOfMassFromCentroid>	<x>0.0</x>
 	<y>0.0</y>
 	<z>40.0</z>
 	<rotw>1.0</rotw>
